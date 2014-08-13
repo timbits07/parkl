@@ -1,17 +1,23 @@
 
 <h1>Your Parks</h1>
 
-<% @parks.each do |park| %>
+<hr/>
 
-	<div class="park">
-		<div>Name:<%= park.name %></div>
-		<div>Location:<%= park.location %></div>
-		<div>Equipment:<%= park.equipment %></div>
-		<div>Hours:<%= park.hours %></div>
-		<div>Open space:<%= park.open_space %></div>
-		<div>Parking lot:<%= park.parking_lot %></div>
-		<div>Restrooms:<%= park.restrooms %></div>
-		<div>Comments:<%= park.comments %></div>
+<div id="index-wrapper">
+	<div id="columns">
+		<% @parks.each do |park| %>
+
+			<div class="park">
+				<div><strong>Name: </strong><%= park.name %></div>
+				<div><strong>Location: </strong><%= park.location %></div>
+				<div><strong>Equipment: </strong><%= park.equipment %></div>
+				<div><strong>Hours: </strong><%= park.hours %></div>
+				<div><strong>Open space: </strong><%= park.open_space %></div>
+				<div><strong>Parking lot: </strong><%= park.parking_lot %></div>
+				<div><strong>Restrooms: </strong><%= park.restrooms %></div>
+				<div><strong>Comments: </strong><%= park.comments %></div>
+			</div>
+			
+		<% end %>
 	</div>
-	
-<% end %>
+</div>

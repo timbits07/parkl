@@ -4,16 +4,141 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/***********************
+MAIN 
+***********************/
+
+body {
+	background: url(/assets/park.png)no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+	background-size: cover;
+}
+
+h1 {
+	text-align: center;
+}
+
+
+/***********************
+PAGE: HOME (LOGO) 
+***********************/
+
+
+#logo {
+	max-width: 45%;
+	margin-left: 26.5%;
+	margin-top: 15px;
+}
+
+
+/***********************
+PAGE: HOME (LANDING BOX)  
+***********************/
+
+#landing_box {
+	max-width: 40%;
+	height: 300px;
+	margin: 100px auto;
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 25px;
+}
+
+#landing_box h2 {
+	font-size: 30px;
+}
+
+#initial {
+	text-align: center;
+	padding: 25px 0 10px 0;
+	font-family: 'Nunito', sans;
+	font-size: 3.25em;
+}
+
+#signInButt {
+	width: 200px;
+	height: 90px;
+	margin: 15px 6% 0 6%;
+	border-radius: 15px;
+	font-family: 'Nunito', sans;
+	font-size: 2.5em;
+	background-color: #FFFF00;
+}
+
+#signUpButt {
+	width: 200px;
+	height: 90px;
+	margin: 15px 6% 0 6%;
+	border-radius: 15px;
+	font-family: 'Nunito', sans;
+	font-size: 2.5em;
+	background-color: #FFFF00;
+}
+
+
+/***********************
+PAGE: INDEX 
+***********************/
+
+#index-wrapper {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+#columns {
+	-webkit-column-count: 3;
+	-webkit-column-gap: 10px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 3;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	column-count: 3;
+	column-gap: 15px;
+	column-fill: auto;
+}
+
+.pin {
+	display: inline-block;
+	background: #FEFEFE;
+	border: 2px solid #FAFAFA;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 2px 15px;
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	column-break-inside: avoid;
+	padding: 15px;
+	padding-bottom: 5px;
+	background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+	opacity: 1;
+	
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
 .park {
 	padding: 10px;
 	border: 1px solid black;
 	border-radius: 10px;
-	width: 175px/1080px * 100%;
 	margin: 5px;
 	display: inline-block;
-	background-color: #FFF;
+	background-color: rgba(255, 255, 255, 0.8);
   }
 
-  body {
-  	background-color: green;
-  }
+@media (min-width: 960px) {
+	#columns {
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		column-count: 4;
+	}
+}
+
+@media (min-width: 1100px) {
+	#columns {
+		-webkit-column-count: 5;
+		-moz-column-count: 5;
+		column-count: 5;
+	}
+}
