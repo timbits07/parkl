@@ -1,0 +1,17 @@
+
+<h1>Your Parks</h1>
+
+<% @parks.each do |park| %>
+
+	<div class="park">
+		<div>Name:<%= park.name %></div>
+		<div>Location:<%= park.location %></div>
+		<div>Equipment:<%= park.equipment %></div>
+		<div>Hours:<%= park.hours %></div>
+		<div>Open space:<%= park.open_space %></div>
+		<div>Parking lot:<%= park.parking_lot %></div>
+		<div>Restrooms:<%= park.restrooms %></div>
+		<div>Comments:<%= park.comments %></div>
+	</div>
+	
+<% end %>

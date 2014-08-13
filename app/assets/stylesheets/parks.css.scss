@@ -1,0 +1,19 @@
+// Place all the styles related to the parks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.park {
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 10px;
+	width: 175px/1080px * 100%;
+	margin: 5px;
+	display: inline-block;
+	background-color: #FFF;
+  }
+
+  body {
+  	background-color: green;
+  }
