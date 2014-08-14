@@ -20,6 +20,10 @@ h1 {
 	text-align: center;
 }
 
+hr {
+	clear: both;
+}
+
 
 /***********************
 PAGE: HOME (LOGO) 
@@ -142,3 +146,23 @@ PAGE: INDEX
 		column-count: 5;
 	}
 }
+
+#index_title {
+	padding: 20px;
+	border: 2px solid black;
+	background-color: rgba(255, 255, 255, 0.8);
+	max-width: 250px;
+	margin: 15px auto 0;
+	border-radius: 15px;
+}
+
+#new_park_button {
+	float: right;
+	margin: -60px 40px 40px 0;
+}
+
+#find_park_button {
+	float: left;
+	margin: -60px 0 40px 40px;
+}
+

@@ -1,5 +1,7 @@
 
-<h1>Your Parks</h1>
+<h1 id="index_title">Your Parks</h1>
+<button type="button" class="btn btn-warning" id="new_park_button">Add New Park</button>
+<button type="button" class="btn btn-warning" id="find_park_button">Find Me A Park</button>
 
 <hr/>
 
@@ -16,7 +18,32 @@
 				<div><strong>Parking lot: </strong><%= park.parking_lot %></div>
 				<div><strong>Restrooms: </strong><%= park.restrooms %></div>
 				<div><strong>Comments: </strong><%= park.comments %></div>
+				<hr/>
+				<button data-toggle="modal" data-target="#myModal">Details</button>
 			</div>
+			<div class="modal fade" id="myModal">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			        <h4 class="modal-title"><%= park.name %></h4>
+			      </div>
+			      <div class="modal-body">
+							<div><strong>Location: </strong><%= park.location %></div>
+							<div><strong>Equipment: </strong><%= park.equipment %></div>
+							<div><strong>Hours: </strong><%= park.hours %></div>
+							<div><strong>Open space: </strong><%= park.open_space %></div>
+							<div><strong>Parking lot: </strong><%= park.parking_lot %></div>
+							<div><strong>Restrooms: </strong><%= park.restrooms %></div>
+							<div><strong>Comments: </strong><%= park.comments %></div>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-primary">Edit</button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
 			
 		<% end %>
 	</div>
