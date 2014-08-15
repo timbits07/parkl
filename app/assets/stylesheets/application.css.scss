@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
- //= depend_on_asset "park.png"
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -23,7 +22,7 @@ MAIN
 ***********************/
 
 body {
-	background: url('<%= asset_path("park.png") %>')no-repeat center center fixed;
+	background: url(/assets/park.png)no-repeat center center fixed;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
