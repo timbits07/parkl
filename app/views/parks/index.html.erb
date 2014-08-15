@@ -2,7 +2,7 @@
 			<img id="logo" src="/assets/parkl_logo.png">
 </div>
 <%= button_to "Add New Park", new_park_path, :method => "get", class: "btn btn-large btn-primary", id: "add_park_button"%>
-<%= button_to "Pick-a-Park", new_park_path, :method => "get", class: "btn btn-large btn-primary", id: "pick_park_button"%>
+<%= button_to "Pick-a-Park", random_path, :method => "get", class: "btn btn-large btn-primary", id: "pick_park_button"%>
 <%= button_to "Sign Out", sign_out_path, :method => "delete", class: "btn btn-large btn-primary", id: "sign_out_button"%>
 
 <hr/>
@@ -21,9 +21,9 @@
 				<div><strong>Restrooms: </strong><%= park.restrooms %></div>
 				<div><strong>Comments: </strong><%= park.comments %></div>
 				<hr/>
-				<button data-toggle="modal" data-target="#myModal" class=" btn btn-primary">Details</button>
+				<button data-toggle="modal" data-target="#myModal<%= park.id %>" class=" btn btn-primary">Details</button>
 			</div>
-			<div class="modal fade" id="myModal">
+			<div class="modal fade" id="myModal<%= park.id %>">
 			  <div class="modal-dialog">
 			    <div class="modal-content">
 			      <div class="modal-header">
@@ -40,8 +40,15 @@
 							<div><strong>Comments: </strong><%= park.comments %></div>
 			      </div>
 			      <div class="modal-footer">
-			      	<%= button_to "Add New Park", new_park_path, :method => "get", class: "btn btn-large btn-primary"%>
-			      	<%= button_to "Delete Park", park, :method => "delete", class: "btn btn-warning"%>
+			      	<div class="mod_foot_button">
+			      		<%= button_to "Add New Park", new_park_path, method: :get, class: "btn btn-large btn-primary"%>
+			      	</div>
+			      	<div class="mod_foot_button">
+			      		<%= button_to "Edit Park", edit_park_path(park), method: :get, class: "btn btn-primary"%>
+			      	</div>
+			      	<div class="mod_foot_button">
+			      		<%= button_to "Delete Park", park, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning"%>
+			      	</div>
 			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 			      </div>
 			    </div><!-- /.modal-content -->
