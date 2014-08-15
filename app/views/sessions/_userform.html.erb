@@ -1,0 +1,17 @@
+<%= form_for User.new do |f| %>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %><br>
+    <%= f.text_field :password_confirmation %>
+  </div><br/>
+  <div class="actions">
+    <%= f.submit "Create Account", class: "btn btn-large btn-primary"%>
+  </div>
+<% end %>

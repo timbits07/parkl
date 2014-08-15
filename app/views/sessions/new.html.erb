@@ -1,18 +1,67 @@
-<h1>Sign in</h1>
-
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(:session, url: sessions_path) do |f| %>
-
-      <%= f.label :email %>
-      <%= f.text_field :email %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-
-      <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
-    <% end %>
-
-    <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parkl</title>
+  <meta charset="UTF-8">
+  <link href='http://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="animate.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <header>
+    <div class="animated bounceInDown">
+      <img id="logo" src="/assets/parkl_logo.png">
+    </div>
+  </header>
+  <div id="landing_box" class="animated rubberBand">
+    <div>
+      <h2 id="initial">Ready to play?<br/> Tell us which parks you like to visit and we'll help you pick which one to visit today.</h2>
+      <button id="signInButt" type="button" data-toggle="modal" data-target="#signInModal">Sign In</button>
+      <button id="signUpButt" type="button" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
+    </div>
   </div>
-</div>
+  <!-- Sign In Modal -->
+  <div class="modal fade"id="signInModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title">Sign In Here</h4>
+        </div>
+        <div class="modal-body">
+          <%= form_for(:session, url: sessions_path) do |f| %>
+
+            <%= f.label :email %>
+            <%= f.text_field :email %>
+
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+
+            <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+          <% end %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!-- Sign Up Modal -->
+  <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title">Sign Up Here</h4>
+        </div>
+        <div class="modal-body">
+          <%= render 'userform' %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+</body>
+</html>

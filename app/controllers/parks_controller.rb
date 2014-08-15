@@ -32,6 +32,7 @@ class ParksController < ApplicationController
       	render :action => :edit
    		end
 	end
+	
 	def destroy
 		@park = Park.find params[:id]
     	@park.destroy
