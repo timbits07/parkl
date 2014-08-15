@@ -1,5 +1,5 @@
 <div class="animated bounceInDown" id="index_logo">
-			<img id="logo" src="/assets/parkl_logo.png">
+			<img id="logo" src="<%= asset_path("park_logo.png") %>">
 </div>
 <%= button_to "Add New Park", new_park_path, :method => "get", class: "btn btn-large btn-primary", id: "add_park_button"%>
 <%= button_to "Pick-a-Park", random_path, :method => "get", class: "btn btn-large btn-primary", id: "pick_park_button"%>
