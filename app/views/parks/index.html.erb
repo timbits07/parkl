@@ -1,7 +1,7 @@
 
 <h1 id="index_title">Your Parks</h1>
-<button type="button" class="btn btn-warning" id="new_park_button">Add New Park</button>
-<button type="button" class="btn btn-warning" id="find_park_button">Find Me A Park</button>
+<%= button_to "Add New Park", new_park_path, :method => "get" %>
+
 
 <hr/>
 
@@ -36,6 +36,7 @@
 							<div><strong>Parking lot: </strong><%= park.parking_lot %></div>
 							<div><strong>Restrooms: </strong><%= park.restrooms %></div>
 							<div><strong>Comments: </strong><%= park.comments %></div>
+							
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -48,3 +49,4 @@
 		<% end %>
 	</div>
 </div>
+
