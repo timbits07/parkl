@@ -41,7 +41,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'randumb'
-gem 'ruby', '2.1.2'
+ruby '2.1.2'
 gem 'thin', group: :production
 gem 'rails_12factor', group: :production
 
