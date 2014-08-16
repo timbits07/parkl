@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :parks, except: [:show]
   get 'random' => 'parks#show', as: :random #re-write route to use show page but use random method from 'randumb' gem.
   resources :sessions, only: [:create]
-  resources :users, except: [:show]
+  resources :users
   get 'sign_up' => 'users#new', as: :sign_up
   get 'signin' => "sessions#new", as: :sign_in
   delete 'signout' => "sessions#destroy", as: :sign_out

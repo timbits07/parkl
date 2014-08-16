@@ -204,7 +204,7 @@ PAGE: NEW PARK
 #new_park_form {
 	border: 2px solid black;
 	border-radius: 25px;
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(255, 255, 255, 0.9);
 	max-width: 18%;
 	margin: 0 auto;
 }
@@ -221,7 +221,7 @@ PAGE: EDIT PARK
 #edit_park_form {
 	border: 2px solid black;
 	border-radius: 25px;
-	background: rgba(255, 255, 255, 0.8);
+	background: rgba(255, 255, 255, 0.9);
 	max-width: 18%;
 	margin: 0 auto;
 }
@@ -231,4 +231,19 @@ PAGE: EDIT PARK
 	margin-left: 8px;
 }
 
+/***********************
+PAGE: RANDOM PARK  
+***********************/
 
+#random_park_div {
+	border: 2px solid black;
+	border-radius: 25px;
+	background: rgba(255, 255, 255, 0.9);
+	max-width: 25%;
+	margin: 0 auto;
+}
+
+#random_content {
+	padding: 15px;
+	margin-left: 8px;
+}
