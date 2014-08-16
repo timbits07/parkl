@@ -76,9 +76,9 @@ PAGE: HOME (LANDING BOX)
 }
 
 #signInButt {
-	width: 200px;
+	width: 37%;
 	height: 90px;
-	margin: 15px 6% 0 6%;
+	margin: 15px 4% 0 8%;
 	border-radius: 15px;
 	font-family: 'Nunito', sans;
 	font-size: 2.5em;
@@ -86,13 +86,18 @@ PAGE: HOME (LANDING BOX)
 }
 
 #signUpButt {
-	width: 200px;
+	width: 37%;
 	height: 90px;
-	margin: 15px 6% 0 6%;
+	margin: 15px 5% 0 4%;
 	border-radius: 15px;
 	font-family: 'Nunito', sans;
 	font-size: 2.5em;
 	background-color: #FFFF00;
+}
+
+#intro_buttons {
+	margin: 0 auto;
+	width: 95%;
 }
 
 
