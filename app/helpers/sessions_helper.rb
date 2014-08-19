@@ -8,7 +8,7 @@ module SessionsHelper
 
   def signed_in_user
     unless signed_in?
-      redirect_to signin_url
+      redirect_to root_url
     end
   end
 
