@@ -4,21 +4,21 @@
 	<div class="park_form_content">
 		<%= form_for(@park) do |f| %>
 			<%= f.label :name %><br/>
-			<%= f.text_field :name %><br/>
+			<%= f.text_field :name, :size => 43 %><br/>
 			<%= f.label :location %><br/>
-			<%= f.text_field :location %><br/>
+			<%= f.text_field :location, :size => 43 %><br/>
 			<%= f.label :equipment %><br/>
-			<%= f.text_field :equipment %><br/>
+			<%= f.text_field :equipment, :size => 43 %><br/>
 			<%= f.label :hours %><br/>
-			<%= f.text_field :hours %><br/>
+			<%= f.text_field :hours, :size => 43 %><br/>
 			<%= f.label :open_space %><br/>
-			<%= f.text_field :open_space %><br/>
+			<%= f.text_field :open_space, :size => 43 %><br/>
 			<%= f.label :parking_lot %><br/>
-			<%= f.text_field :parking_lot %><br/>
+			<%= f.text_field :parking_lot, :size => 43 %><br/>
 			<%= f.label :restrooms %><br/>
-			<%= f.text_field :restrooms %><br/>
+			<%= f.text_field :restrooms, :size => 43 %><br/>
 			<%= f.label :comments %><br/>
-			<%= f.text_area :comments %><br/>
+			<%= f.text_area :comments, :cols => "43", :rows => "3" %><br/>
 			<%= f.submit class: "btn btn-large btn-primary"%>
 			<%= link_to 'Back', parks_path, class: "btn btn-large btn-primary" %>
 			<%= link_to 'Delete', @park, method: :delete, data: {confirm: 'Are you sure?'} %>

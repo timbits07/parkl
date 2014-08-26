@@ -216,7 +216,7 @@ PAGE: EDIT PARK
 	border: 2px solid black;
 	border-radius: 25px;
 	background: rgba(255, 255, 255, 0.9);
-	max-width: 18%;
+	max-width: 30%;
 	margin: 0 auto;
 }
 
@@ -225,19 +225,27 @@ PAGE: EDIT PARK
 	margin-left: 8px;
 }
 
+
 /***********************
-PAGE: RANDOM PARK  
+PAGE: PARK MAP  
 ***********************/
 
-#random_park_div {
-	border: 2px solid black;
-	border-radius: 25px;
+#map_div {
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 50px auto;
+	max-width: 55%;
 	background: rgba(255, 255, 255, 0.9);
-	max-width: 25%;
-	margin: 0 auto;
 }
 
-#random_content {
-	padding: 15px;
-	margin-left: 8px;
+#map {
+	border: 1px solid grey;
+	border-radius: 10px;
+	margin: 15px auto;
+	max-width: 95%;
+	height: 400px;
+}
+
+#back_button {
+	margin: 5px;
 }

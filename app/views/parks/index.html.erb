@@ -2,25 +2,9 @@
 			<img id="logo" src="/assets/parkl_logo.png">
 </div>
 <button data-toggle="modal" data-target="#newModal" class="btn btn-large btn-primary" id="add_park_button">Add New Park</button>
-<%= button_to "Pick-a-Park", random_path, :method => "get", class: "btn btn-large btn-primary", id: "pick_park_button"%>
+<button data-toggle="modal" data-target="#randomModal" class="btn btn-large btn-primary" id="pick_park_button">Pick-a-Park</button>
 <%= button_to "Sign Out", sign_out_path, :method => "delete", class: "btn btn-large btn-primary", id: "sign_out_button"%>
-<button data-toggle="modal" data-target="#mapModal" class="btn btn-large btn-primary" id="map_button">Map Of Parks</button>
-<div class="modal fade modal-lg" id="mapModal">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title">Parks Map</h4>
-      </div>
-      <div class="modal-body">
-				<%= render 'park_map' %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+<%= button_to "Map Of Parks", parks_map_path, :method => "get", class: "btn btn-large btn-primary", id: "map_button"%>
 <div class="modal fade" id="newModal">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -45,7 +29,7 @@
         <h4 class="modal-title">Try This Park Today</h4>
       </div>
       <div class="modal-body">
-				<%= render 'new_park' %>
+				<%= render 'random' %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

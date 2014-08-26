@@ -1,11 +1,7 @@
 class ParksController < ApplicationController
 	def index
 		@parks = current_user.parks
-		@hash = Gmaps4rails.build_markers(@parks) do |park, marker|
-      marker.lat park.latitude
-      marker.lng park.longitude
-      marker.title park.name
-    end
+    @park = Park.order_by_rand.first
 	end
 
 	def new
@@ -22,7 +18,12 @@ class ParksController < ApplicationController
 	end
 	
 	def show
-		@park = Park.order_by_rand.first
+		@parks = current_user.parks
+		@hash = Gmaps4rails.build_markers(@parks) do |park, marker|
+      marker.lat park.latitude
+      marker.lng park.longitude
+      marker.title park.name
+		end
 	end
 	
 	def edit

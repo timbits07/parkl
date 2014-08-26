@@ -1,0 +1,38 @@
+<div id="park_name">
+	<h1><%= @park.name %></h1>
+</div>
+
+<hr/>
+		<p>
+			<strong>Location:</strong>
+			<%= @park.location %>
+		</p>
+		<p>
+			<strong>Equipment:</strong>
+			<%= @park.equipment %>
+		</p>
+		<p>
+			<strong>Hours:</strong>
+			<%= @park.hours %>
+		</p>
+		<p>
+			<strong>Open Space:</strong>
+			<%= @park.open_space %>
+		</p>
+		<p>
+			<strong>Parking Lot:</strong>
+			<%= @park.parking_lot %>
+		</p>
+		<p>
+			<strong>Restrooms:</strong>
+			<%= @park.restrooms %>
+		</p>
+		<p>
+			<strong>Comment:</strong>
+			<%= @park.comments %>
+		</p>
+		<hr/>
+		<%= link_to 'Edit', edit_park_path(@park), class: "btn btn-primary" %>
+		<%= link_to 'Back', parks_path, class: "btn btn-primary" %>
+
+
