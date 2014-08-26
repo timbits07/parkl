@@ -8,4 +8,7 @@ class Park < ActiveRecord::Base
 	validates :parking_lot, presence: true
 	validates :restrooms, presence: true
 	validates :comments, presence: true
+
+	geocoded_by :location
+  after_validation :geocode
 end

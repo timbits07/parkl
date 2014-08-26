@@ -1,6 +1,11 @@
 class ParksController < ApplicationController
 	def index
 		@parks = current_user.parks
+		@hash = Gmaps4rails.build_markers(@parks) do |park, marker|
+      marker.lat park.latitude
+      marker.lng park.longitude
+      marker.title park.name
+    end
 	end
 
 	def new
@@ -37,7 +42,7 @@ class ParksController < ApplicationController
 		@park = Park.find params[:id]
     	@park.destroy
     	redirect_to parks_path
-    end
+  end
 
 
 private

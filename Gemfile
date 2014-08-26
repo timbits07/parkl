@@ -44,4 +44,7 @@ gem 'randumb'
 ruby '2.1.2'
 gem 'thin', group: :production
 gem 'rails_12factor', group: :production
+gem 'geocoder'
+gem 'gmaps4rails'
+gem 'underscore-rails'
 
