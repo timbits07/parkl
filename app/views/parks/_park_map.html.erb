@@ -8,7 +8,7 @@
   handler = Gmaps.build('Google');
   handler.buildMap({ provider: {
   	map_options: {
-  		"center" => LatLng(lat:33.653543,lng:-117.940665)
+  		
   	}
   }, internal: {id: 'map'}}, function(){
     markers = handler.addMarkers(<%=raw @hash.to_json %>);
