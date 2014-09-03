@@ -6,10 +6,14 @@
 
 <script type="text/javascript">
   handler = Gmaps.build('Google');
-  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  handler.buildMap({ provider: {
+  	map_options: {
+  		"center" => LatLng(lat:33.653543,lng:,-117.940665)
+  	}
+  }, internal: {id: 'map'}}, function(){
     markers = handler.addMarkers(<%=raw @hash.to_json %>);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
-    // google.maps.event.trigger(map, 'resize')
   });
+  google.maps.event.trigger(map, 'resize')
 </script>
